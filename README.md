@@ -1,11 +1,11 @@
 # Crud PHP
 
-** Com objetivo de criar uma API PHP Rest, sem utilização de framework,
+Com objetivo de criar uma API PHP Rest, sem utilização de framework,
 juntamente com integração em AngularJs(1.6).
 
-##Utilizando Xampp como servidor local.
+## Utilizando Xampp como servidor local.
 
-####Exemplos:
+#### Exemplos:
 
 ### POST/GET/PUT
 
@@ -27,7 +27,7 @@ http://localhost:80/php-crud/api/hobby
 http://localhost:80/php-crud/api/hobby/?id=?
 ```
 
-###Acessar Index:
+### Acessar Index:
 
 ```
 http://localhost:80/php-crud/view
