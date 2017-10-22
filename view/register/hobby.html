@@ -1,0 +1,41 @@
+<div class="container">
+        <div class="form-group">
+            <label>Id:</label>
+            <input class="form-control" type="text" placeholder="id" ng-model="hobby.id" disabled>
+        </div>
+        <div class="form-group">
+            <label>Nome:</label>
+            <input class="form-control" type="text" placeholder="nome" ng-model="hobby.nome">
+        </div>
+        <button class="btn btn-primary" ng-click="save()">Salvar</button>
+        <button class="btn btn-warning" ng-click="limpar()">Limpar</button>
+    <br><br>
+
+    <table class="table">
+        <td>
+            <div class="form-group">
+                <label>Id:</label>
+                <input class="form-control" type="number" placeholder="id" ng-model="busca.id">
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input class="form-control" type="text" placeholder="nome" ng-model="busca.nome">
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <br>
+                <input class="btn btn-default form-control" type="button" value="buscar" ng-click="findById()"/>
+            </div>
+        </td>
+
+        <tr ng-repeat="h in hobbyes">
+            <td>{{h.id}}</td>
+            <td>{{h.nome}}</td>
+            <td><input class="btn btn-default" type="button" value="excluir" ng-click="excluir(h.id)"/></td>
+            <td><input class="btn btn-danger" type="button" value="alterar" ng-click="alterar(h)"/></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="form-group">
+        <label>Id:</label>
+        <input class="form-control" type="text" placeholder="id" ng-model="analista.id" disabled>
+    </div>
+    <div class="form-group">
+        <label>Nome:</label>
+        <input class="form-control" type="text" placeholder="nome" ng-model="analista.nome">
+    </div>
+    <div class="form-group">
+        <label>Gênero:</label>
+        <input class="form-control" type="text" placeholder="genero" ng-model="analista.genero">
+    </div>
+    <div class="form-group">
+        <label>Idade:</label>
+        <input class="form-control" type="number" placeholder="idade" ng-model="analista.idade">
+    </div>
+
+    <div class="form-group">
+        <label>Hobby:</label>
+        <input class="form-control" type="number" placeholder="hobby" ng-model="analista.hobby">
+    </div>
+
+    <div class="form-group">
+        <label>Projeto:</label>
+        <input class="form-control" type="text" placeholder="projeto" ng-model="analista.projeto">
+    </div>
+
+
+    <button class="btn btn-primary" ng-click="save()">Salvar</button>
+    <button class="btn btn-warning" ng-click="limpar()">Limpar</button>
+    <br><br>
+
+    <table class="table">
+        <td>
+            <div class="form-group">
+                <label>Id:</label>
+                <input class="form-control" type="number" placeholder="id" ng-model="busca.id">
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input class="form-control" type="text" placeholder="nome" ng-model="busca.nome">
+            </div>
+        </td>
+
+        <tr ng-repeat="h in analistaes">
+            <td>{{h.id}}</td>
+            <td>{{h.nome}}</td>
+            <td>{{h.genero}}</td>
+            <td>{{h.idade}}</td>
+            <td>{{h.hobby_id}}</td>
+            <td>{{h.projeto}}</td>
+            <td><input class="btn btn-default" type="button" value="excluir" ng-click="excluir(h.id)"/></td>
+            <td><input class="btn btn-danger" type="button" value="alterar" ng-click="alterar(h)"/></td>
+        </tr>
+    </table>
+</div>

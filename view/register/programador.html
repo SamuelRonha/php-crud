@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="form-group">
+        <label>Id:</label>
+        <input class="form-control" type="text" placeholder="id" ng-model="programador.id" disabled>
+    </div>
+    <div class="form-group">
+        <label>Nome:</label>
+        <input class="form-control" type="text" placeholder="nome" ng-model="programador.nome">
+    </div>
+    <div class="form-group">
+        <label>Gênero:</label>
+        <input class="form-control" type="text" placeholder="genero" ng-model="programador.genero">
+    </div>
+    <div class="form-group">
+        <label>Idade:</label>
+        <input class="form-control" type="number" placeholder="idade" ng-model="programador.idade">
+    </div>
+
+    <div class="form-group">
+        <label>Hobby:</label>
+        <input class="form-control" type="number" placeholder="hobby" ng-model="programador.hobby">
+    </div>
+
+    <div class="form-group">
+        <label>Linguagem:</label>
+        <input class="form-control" type="text" placeholder="linguagem" ng-model="programador.linguagem">
+    </div>
+
+
+    <button class="btn btn-primary" ng-click="save()">Salvar</button>
+    <button class="btn btn-warning" ng-click="limpar()">Limpar</button>
+    <br><br>
+
+    <table class="table">
+        <td>
+            <div class="form-group">
+                <label>Id:</label>
+                <input class="form-control" type="number" placeholder="id" ng-model="busca.id">
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input class="form-control" type="text" placeholder="nome" ng-model="busca.nome">
+            </div>
+        </td>
+
+        <tr ng-repeat="h in programadores">
+            <td>{{h.id}}</td>
+            <td>{{h.nome}}</td>
+            <td>{{h.genero}}</td>
+            <td>{{h.idade}}</td>
+            <td>{{h.hobby_id}}</td>
+            <td>{{h.linguagem}}</td>
+            <td><input class="btn btn-default" type="button" value="excluir" ng-click="excluir(h.id)"/></td>
+            <td><input class="btn btn-danger" type="button" value="alterar" ng-click="alterar(h)"/></td>
+        </tr>
+    </table>
+</div>
